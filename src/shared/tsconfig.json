@@ -1,0 +1,12 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "module": "ES2022",
+    "moduleResolution": "Bundler",
+    "types": [],
+    "rootDir": ".",
+    "outDir": "../../build/shared",
+    "tsBuildInfoFile": "../../build/shared.tsbuildinfo"
+  },
+  "include": ["*.ts"]
+}

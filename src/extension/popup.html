@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Eazy-share</title>
+<link rel="stylesheet" href="popup.css">
+</head>
+<body>
+<header>
+  <h1>Eazy-share</h1>
+  <span class="pill" id="pill" data-state="loading">Checking…</span>
+</header>
+
+<!-- Shown until the one-time native host setup has been done. -->
+<section id="setup" hidden>
+  <h2>One-time setup</h2>
+  <p>The extension starts a small program on this computer. Register it once:</p>
+  <ol class="plain">
+    <li>Open a terminal (Terminal, Command Prompt or PowerShell) in the <strong>Eazy-share</strong> folder.</li>
+    <li>Run this command:
+      <div class="row"><code id="command"></code><button id="copyCommand" class="small">Copy</button></div>
+    </li>
+    <li>Come back here and press <strong>Try again</strong>.</li>
+  </ol>
+  <p class="muted" id="hostError"></p>
+  <button id="retry" class="primary">Try again</button>
+</section>
+
+<section id="controls" hidden>
+  <button id="toggle" class="primary" disabled>Start sharing</button>
+  <div id="error" class="error" hidden></div>
+
+  <div id="running" hidden>
+    <label>Open this address on the other devices</label>
+    <div class="row"><code id="url"></code><button id="copy" class="small">Copy</button></div>
+    <div class="muted" id="otherUrls"></div>
+    <div class="error" id="noNetwork" hidden>No network found. Connect to Wi-Fi, then stop and start sharing.</div>
+    <button id="open">Open sharing page on this computer</button>
+  </div>
+</section>
+
+<section>
+  <h2>On the receiving device</h2>
+  <ol id="steps" class="steps"></ol>
+</section>
+
+<details>
+  <summary>Not working?</summary>
+  <ul id="trouble" class="steps"></ul>
+</details>
+
+<script type="module" src="js/popup.js"></script>
+</body>
+</html>

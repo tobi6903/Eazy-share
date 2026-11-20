@@ -1,0 +1,9 @@
+{
+  "files": [],
+  "references": [
+    { "path": "src/shared" },
+    { "path": "src/node" },
+    { "path": "src/web" },
+    { "path": "src/extension" }
+  ]
+}

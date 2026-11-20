@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Eazy-share</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<main>
+  <header>
+    <h1>Eazy-share</h1>
+    <div class="me"><span class="dot" id="dot"></span> You are <input id="myName" maxlength="30" aria-label="Your device name"></div>
+  </header>
+
+  <section class="card">
+    <h2>1 · Pick files or a folder</h2>
+    <div class="drop" id="drop">
+      <p id="dropHint">Drop files or folders here</p>
+      <div class="row">
+        <label class="btn">Choose files<input type="file" id="pickFiles" multiple></label>
+        <label class="btn" id="folderLabel">Choose folder<input type="file" id="pickFolder" webkitdirectory></label>
+      </div>
+    </div>
+    <p class="note" id="touchNote" hidden>To send a whole folder, use a computer.</p>
+    <div class="picked" id="picked" hidden>
+      <div class="names" id="pickedText"></div>
+      <button class="btn" id="clear">Clear</button>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>2 · Send to <a href="#" id="all" class="all">Select all</a></h2>
+    <ul id="devices"></ul>
+  </section>
+
+  <section class="card">
+    <div class="row start"><button class="btn primary" id="send" disabled>Zip &amp; send</button></div>
+    <div class="bar" id="bar"><i id="fill"></i></div>
+    <div class="status" id="status"></div>
+  </section>
+
+  <section class="card">
+    <h2>Received</h2>
+    <ul id="inbox"></ul>
+  </section>
+</main>
+<div class="toast" id="toast"></div>
+<script type="module" src="/js/main.js"></script>
+</body>
+</html>
