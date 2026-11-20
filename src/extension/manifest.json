@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Eazy-share",
+  "version": "1.0.0",
+  "description": "Start a local file-sharing server and send files or folders to other devices on your Wi-Fi.",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmXAFBD/c8R9cfFMMVU/JAmJMkBQ6Fh4kqoA1QjN4FJJX8tt5fgga5h0ZYPE2wzI0QudV/0nwmUY7P+WkAC0IDKhLrKW0SG2Wz20HG2sY6lNJr6Eltwtn1eZrBQyhka8Y4XIab8rOss22EkUYYy6DINalbzKQ9HjCTr93+oBBBba+RE1df6aQT1dkB2gsMfGwkjeIzqnFND2GcCT7o+4tHdXRjQ3pcnZZqTkHNccII49ACjc/DFfPDEmoZQE3UE7RHLe9qGLfZaVIHB56mhlo3VwVU1Fyp+JPUS5uL7oBwRELZjZJ/VLahfuTBQmUGCjsiqXyJx3/7bvvDW9ahxNMHQIDAQAB",
+  "action": {
+    "default_title": "Eazy-share",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": ["nativeMessaging"]
+}

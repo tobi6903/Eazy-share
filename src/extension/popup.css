@@ -1,0 +1,38 @@
+:root {
+  --bg: #fff; --text: #1c2026; --muted: #6b7280; --border: #e3e6ea; --card: #f6f7f9;
+  --accent: #2563eb; --danger: #dc2626; --ok: #16a34a;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #1a1d23; --text: #e8eaed; --muted: #9aa1ab; --border: #2a2f37; --card: #101216;
+          --accent: #5b8def; --danger: #f87171; --ok: #4ade80; }
+}
+* { box-sizing: border-box; }
+body { width: 360px; margin: 0; padding: 14px; background: var(--bg); color: var(--text);
+       font: 13px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+h1 { font-size: 16px; margin: 0; }
+h2 { font-size: 11px; margin: 16px 0 8px; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; }
+section { margin-bottom: 4px; }
+.pill { font-size: 11px; padding: 2px 9px; border-radius: 999px; background: var(--card); border: 1px solid var(--border); color: var(--muted); }
+.pill[data-state="running"] { color: var(--ok); border-color: var(--ok); }
+.pill[data-state="setup"] { color: var(--danger); border-color: var(--danger); }
+button { font: inherit; border: 1px solid var(--border); background: transparent; color: var(--text);
+         border-radius: 8px; padding: 8px 12px; cursor: pointer; width: 100%; margin-top: 8px; }
+button.primary { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 600; margin-top: 0; }
+button.primary.danger { background: transparent; color: var(--danger); border-color: var(--danger); }
+button.small { width: auto; margin: 0; padding: 4px 10px; flex: none; }
+button:disabled { opacity: .5; cursor: default; }
+label { display: block; margin: 14px 0 6px; color: var(--muted); }
+.row { display: flex; gap: 6px; align-items: center; margin-top: 6px; }
+code { flex: 1; min-width: 0; padding: 6px 8px; border-radius: 6px; background: var(--card); border: 1px solid var(--border);
+       font: 12px ui-monospace, SFMono-Regular, Menlo, monospace; overflow-wrap: anywhere; user-select: all; }
+.muted { color: var(--muted); margin-top: 6px; }
+.error { color: var(--danger); margin-top: 8px; }
+.steps, .plain { margin: 0; padding-left: 20px; }
+.steps li, .plain li { margin-bottom: 8px; }
+.steps strong { display: block; }
+.steps span { color: var(--muted); }
+ul.steps { list-style: none; padding-left: 0; }
+details { margin-top: 10px; border-top: 1px solid var(--border); padding-top: 10px; }
+summary { cursor: pointer; color: var(--muted); }
+details ul { margin-top: 10px; }

@@ -1,0 +1,15 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "module": "ES2022",
+    "moduleResolution": "Bundler",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "types": ["chrome"],
+    "rootDir": ".",
+    "outDir": "../../dist/extension/js",
+    "declarationDir": "../../build/types/extension",
+    "tsBuildInfoFile": "../../build/extension.tsbuildinfo"
+  },
+  "include": ["**/*.ts"],
+  "references": [{ "path": "../shared" }]
+}
