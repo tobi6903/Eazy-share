@@ -1,0 +1,30 @@
+{
+  "name": "eazy-share",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Send files and folders to other devices on your network, started from a browser extension.",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "bin": {
+    "eazy-share": "dist/node/cli/main.js"
+  },
+  "scripts": {
+    "build": "tsc -b && node dist/node/build/copyAssets.js",
+    "clean": "node -e \"fs.rmSync('dist',{recursive:true,force:true});fs.rmSync('build',{recursive:true,force:true})\"",
+    "test": "npm run build && node --test \"dist/node/**/*.test.js\"",
+    "start": "npm run build && node dist/node/cli/main.js serve",
+    "install-host": "npm run build && node dist/node/cli/main.js install-host"
+  },
+  "dependencies": {
+    "yazl": "^3.3.1"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.3.7",
+    "@types/node": "^22.20.5",
+    "@types/yazl": "^3.3.1",
+    "fflate": "^0.8.3",
+    "typescript": "^7.0.2"
+  }
+}
